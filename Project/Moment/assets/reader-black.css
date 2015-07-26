@@ -1,0 +1,19 @@
+.bs-header, .footer, .post-ft {
+	display:none;
+}
+
+.bs-docs-container {
+	margin-top: 30px !important;
+}
+.post-body{
+	margin-bottom: 80px !important;
+}
+
+* {
+	background: #161616 !important;
+	color: #e3e3e3 !important;
+}
+
+a {
+	color: #0c0 !important
+}

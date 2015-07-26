@@ -1,0 +1,10 @@
+.bs-header, .footer, .post-ft {
+	display:none;
+}
+
+.bs-docs-container {
+	margin-top: 30px !important;
+}
+.post-body{
+	margin-bottom: 80px !important;
+}
