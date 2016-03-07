@@ -50,17 +50,18 @@
     <name>
        Moment Reader
        <text xml:lang="zh-CN">&#x4e00;&#x523b;</text>
+       <text xml:lang="zh-TW">&#x8c46;&#x74e3;</text>
     </name>
 
     <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade.
          Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
          An updated version of application must have a versionNumber value higher than the previous version. Required. -->
-    <versionNumber>1.0.0</versionNumber>
+    <versionNumber>2.0.16</versionNumber>
 
     <!-- Fourth digit segment of the package version. First three segments are taken from the
          <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
-    <buildId>907</buildId>
-    <packageLocale>zh-CN</packageLocale>
+    <buildId>307</buildId>
+    <packageLocale>zh-CN,zh-TW</packageLocale>
 
     <!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
     <!-- <versionLabel></versionLabel> -->
@@ -70,23 +71,22 @@
     <description>
        Unofficial Moment app of douban.com
        <text xml:lang="zh-CN">&#x8c46;&#x74e3;&#x6bcf;&#x65e5;&#x5185;&#x5bb9;&#x7cbe;&#x9009;&#xff0c;&#x300a;&#x4e00;&#x523b;&#x300b;&#x975e;&#x5b98;&#x65b9;&#x5ba2;&#x6237;&#x7aef;</text>
+       <text xml:lang="zh-TW">&#x8c46;&#x74e3;&#x5ba2;&#x6236;&#x7aef;</text>
     </description>
 
     <!-- Copyright information. Optional. -->
     <!-- <copyright></copyright> -->
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
+    <icon>
+       <image>icon.png</image>
+    </icon>
     <splashScreens>
        <image>1280x720.png</image>
        <image>1280x768.png</image>
-       <image>720x1280.png</image>
+       <image>1440x1440.png</image>
        <image>720x720.png</image>
-       <image>768x1280.png</image>
     </splashScreens>
-    <icon>
-       <image>114.png</image>
-    </icon>
-    <category>core.games</category>
     <authorId>gYAAgMy-I-SFJtVvioZxVXYQjhA</authorId>
     <author>anpho</author>
 
@@ -106,17 +106,16 @@
     <asset path="translations" dest="qm">
         <include name="*.qm"/>
     </asset>
-    <asset path="assets/icon/ic_launcher.png">ic_launcher.png</asset>
-    <asset path="assets/1280x720.png">1280x720.png</asset>
-    <asset path="assets/1280x768.png">1280x768.png</asset>
-    <asset path="assets/720x1280.png">720x1280.png</asset>
-    <asset path="assets/720x720.png">720x720.png</asset>
-    <asset path="assets/768x1280.png">768x1280.png</asset>
-    <asset path="assets/114.png">114.png</asset>
+    <asset path="icon.png">icon.png</asset>
+    <asset path="1280x720.png">1280x720.png</asset>
+    <asset path="1280x768.png">1280x768.png</asset>
+    <asset path="1440x1440.png">1440x1440.png</asset>
+    <asset path="720x720.png">720x720.png</asset>
 
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>
     <permission>access_internet</permission>
     <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
+    <env var="CASCADES_THEME" value="default?primaryColor=0x1CC4AD"/>
 
 </qnx>

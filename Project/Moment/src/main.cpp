@@ -20,20 +20,25 @@
 
 #include <QLocale>
 #include <QTranslator>
-
+#include "WebImageView.h"
 #include <Qt/qdeclarativedebug.h>
+#include <unistd.h>
 #include "AppSettings.hpp"
 
 using namespace bb::cascades;
-QString getValue() {
+QString getValue()
+{
     AppSettings se;
     return se.getValueFor("theme", "dark");
 }
 Q_DECL_EXPORT int main(int argc, char **argv)
 {
-    if (getValue().length()>0){
-        qputenv("CASCADES_THEME", getValue().toUtf8());
+    if (getValue().length() > 0) {
+        qputenv("CASCADES_THEME", (getValue()+"?primaryColor=0x1CC4AD").toUtf8());
     }
+    qmlRegisterType<WebImageView>("cn.anpho", 1, 0, "WebImageView");
+    sleep(1);
+
     Application app(argc, argv);
 
     // Create the Application UI object, this is where the main.qml file

@@ -44,24 +44,22 @@ Founder of anpho and CBDA
 中国黑莓开发者联盟(CBDA)</translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="138"/>
+        <location filename="../assets/about.qml" line="129"/>
         <source>Email Me</source>
         <translation>联系开发人员</translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="84"/>
+        <location filename="../assets/about.qml" line="83"/>
         <source>My Homepage</source>
         <translation>我的主页</translation>
     </message>
     <message>
         <location filename="../assets/about.qml" line="69"/>
-        <source>Merrick Zhang
-Founder of anpho and CBDA
-(China BlackBerry Dev. Assoc.)</source>
-        <translation type="unfinished"></translation>
+        <source>Merrick Zhang</source>
+        <translation>狮子头SAMA</translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="94"/>
+        <location filename="../assets/about.qml" line="93"/>
         <source>My Apps</source>
         <translation>我的应用</translation>
     </message>
@@ -79,32 +77,31 @@ Founder of anpho and CBDA
         <translation>撰写评论</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="95"/>
         <source>Credits</source>
-        <translation>致谢</translation>
+        <translation type="obsolete">致谢</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="120"/>
+        <location filename="../assets/main.qml" line="113"/>
         <source>Date</source>
         <translation>日期</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="180"/>
+        <location filename="../assets/main.qml" line="176"/>
         <source>prev</source>
         <translation>前一天</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="191"/>
+        <location filename="../assets/main.qml" line="187"/>
         <source>next</source>
         <translation>后一天</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="244"/>
+        <location filename="../assets/main.qml" line="240"/>
         <source>Network Error</source>
         <translation>网络错误</translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="251"/>
+        <location filename="../assets/main.qml" line="247"/>
         <source>No content today</source>
         <translation>本期无内容</translation>
     </message>
@@ -112,22 +109,22 @@ Founder of anpho and CBDA
 <context>
     <name>reader</name>
     <message>
-        <location filename="../assets/reader.qml" line="63"/>
+        <location filename="../assets/reader.qml" line="64"/>
         <source>Browser Back</source>
         <translation>后退</translation>
     </message>
     <message>
-        <location filename="../assets/reader.qml" line="73"/>
+        <location filename="../assets/reader.qml" line="74"/>
         <source>Share URL</source>
         <translation>共享链接</translation>
     </message>
     <message>
-        <location filename="../assets/reader.qml" line="85"/>
+        <location filename="../assets/reader.qml" line="86"/>
         <source>Open current page in Browser</source>
         <translation>在浏览器中打开当前页</translation>
     </message>
     <message>
-        <location filename="../assets/reader.qml" line="93"/>
+        <location filename="../assets/reader.qml" line="94"/>
         <source>Open post in Browser</source>
         <translation>在浏览器中查看原帖</translation>
     </message>
@@ -136,7 +133,7 @@ Founder of anpho and CBDA
         <translation type="obsolete">在浏览器中打开</translation>
     </message>
     <message>
-        <location filename="../assets/reader.qml" line="101"/>
+        <location filename="../assets/reader.qml" line="102"/>
         <source>ReaderMode</source>
         <translation>阅读模式</translation>
     </message>

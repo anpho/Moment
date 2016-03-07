@@ -5,7 +5,7 @@ Page {
         title: qsTr("Settings")+ Retranslate.onLocaleOrLanguageChanged
         visibility: ChromeVisibility.Visible
         appearance: TitleBarAppearance.Plain
-        scrollBehavior: TitleBarScrollBehavior.Sticky
+        scrollBehavior: TitleBarScrollBehavior.NonSticky
     }
     ScrollView {
 
@@ -137,5 +137,6 @@ Page {
         var theme = _app.getTheme(Application.themeSupport.theme.colorTheme.style === VisualStyle.Bright ? "bright" : "dark");
         themeDropDown.setSelectedIndex("bright" == theme ? 0 : 1);
     }
+    actionBarAutoHideBehavior: ActionBarAutoHideBehavior.HideOnScroll
 
 }

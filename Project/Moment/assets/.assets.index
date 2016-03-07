@@ -1,14 +1,7 @@
 1
-46
+40
 114.png
-1280x720.png
-1280x768.png
-720x1280.png
-720x720.png
-768x1280.png
 about.qml
-ad.png
-AdiQuity.qml
 ajax.js
 Clist.qml
 icon/avatar.png
@@ -37,6 +30,7 @@ icon/ic_open_link.png
 icon/ic_previous.png
 icon/ic_settings.png
 icon/ic_share.png
+ic_default_image_square_light.png
 main.qml
 reader-black.css
 reader.css

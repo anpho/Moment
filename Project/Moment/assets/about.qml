@@ -66,9 +66,8 @@ Page {
                     imageSource: "asset:///icon/avatar.png"
                 }
                 Label {
-                    text: qsTr("Merrick Zhang\r\nFounder of anpho and CBDA\r\n(China BlackBerry Dev. Assoc.)")
+                    text: qsTr("Merrick Zhang")
                     multiline: true
-
                 }
             }
             Container {
@@ -84,7 +83,7 @@ Page {
                     text: qsTr("My Homepage")
                     imageSource: "asset:///icon/ic_open.png"
                     onClicked: {
-                        invokeHomePage.trigger("bb.action.OPEN")
+                        Qt.openUrlExternally("http://bbdev.cn")
                     }
 
                 }
@@ -119,14 +118,6 @@ Page {
                 uri: "appworld://vendor/26755"
             }
         },
-        Invocation {
-            id: invokeHomePage
-            query {
-                invokeTargetId: "sys.browser"
-                invokeActionId: "bb.action.OPEN"
-                uri: "http://anpho.github.io"
-            }
-        },
         AppInfo {
             id: appinfo
         }
@@ -140,7 +131,7 @@ Page {
             ActionBar.placement: ActionBarPlacement.OnBar
             query.invokeTargetId: "sys.pim.uib.email.hybridcomposer"
             query.invokeActionId: "bb.action.SENDEMAIL"
-            query.uri: "mailto:anphorea@gmail.com"
+            query.uri: "mailto:anphorea@gmail.com?subject=MomentFeedback"
 
         }
     ]

@@ -3,7 +3,7 @@ import bb.system 1.0
 
 Page {
     actionBarAutoHideBehavior: ActionBarAutoHideBehavior.HideOnScroll
-    actionBarVisibility: ChromeVisibility.Visible
+    actionBarVisibility: ChromeVisibility.Overlay
     property alias url: web.url
     property string originalurl: ""
     property bool readMode: true
@@ -18,7 +18,7 @@ Page {
         }
     }
     onCreationCompleted: {
-        if (_app.getValue("readMode", "off") === "on") {
+        if (_app.getValue("readMode", "on") === "on") {
             readMode = true;
         } else {
             readMode = false;
@@ -28,7 +28,6 @@ Page {
         console.log(url)
     }
     ScrollView {
-
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill
         Container {
@@ -40,6 +39,7 @@ Page {
                 horizontalAlignment: HorizontalAlignment.Fill
             }
             WebView {
+                preferredHeight: Infinity
                 verticalAlignment: VerticalAlignment.Top
                 horizontalAlignment: HorizontalAlignment.Fill
                 id: web
@@ -52,7 +52,8 @@ Page {
                         event.abort()
                     }
                 }
-                settings.defaultFontSizeFollowsSystemFontSize: true
+                implicitLayoutAnimationsEnabled: false
+
             }
         }
     }
@@ -60,7 +61,7 @@ Page {
     actions: [
         ActionItem {
             imageSource: "asset:///icon/icon_001.png"
-            title: qsTr("Browser Back")+ Retranslate.onLocaleOrLanguageChanged
+            title: qsTr("Browser Back") + Retranslate.onLocaleOrLanguageChanged
             enabled: web.canGoBack
             onTriggered: {
                 web.goBack();
@@ -70,7 +71,7 @@ Page {
         InvokeActionItem {
             imageSource: "asset:///icon/icon_189.png"
             ActionBar.placement: ActionBarPlacement.OnBar
-            title: qsTr("Share URL")+ Retranslate.onLocaleOrLanguageChanged
+            title: qsTr("Share URL") + Retranslate.onLocaleOrLanguageChanged
             query {
                 mimeType: "text/plain"
                 invokeActionId: "bb.action.SHARE"
@@ -82,7 +83,7 @@ Page {
         ActionItem {
             imageSource: "asset:///icon/icon_170.png"
             ActionBar.placement: ActionBarPlacement.InOverflow
-            title: qsTr("Open current page in Browser")+ Retranslate.onLocaleOrLanguageChanged
+            title: qsTr("Open current page in Browser") + Retranslate.onLocaleOrLanguageChanged
             onTriggered: {
                 Qt.openUrlExternally(web.url)
             }
@@ -90,7 +91,7 @@ Page {
         ActionItem {
             imageSource: "asset:///icon/icon_170.png"
             ActionBar.placement: ActionBarPlacement.InOverflow
-            title: qsTr("Open post in Browser")+ Retranslate.onLocaleOrLanguageChanged
+            title: qsTr("Open post in Browser") + Retranslate.onLocaleOrLanguageChanged
             onTriggered: {
                 Qt.openUrlExternally(originalurl)
             }
@@ -98,7 +99,7 @@ Page {
         },
         ActionItem {
             imageSource: "asset:///icon/icon_211.png"
-            title: qsTr("ReaderMode")+ Retranslate.onLocaleOrLanguageChanged
+            title: qsTr("ReaderMode") + Retranslate.onLocaleOrLanguageChanged
             onTriggered: {
                 readMode = ! readMode;
             }

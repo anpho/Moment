@@ -85,16 +85,9 @@ NavigationPane {
         actions: [
             ActionItem {
                 imageSource: "asset:///icon/ic_open.png"
-                title: qsTr("Rate App")+ Retranslate.onLocaleOrLanguageChanged
+                title: qsTr("Rate App") + Retranslate.onLocaleOrLanguageChanged
                 onTriggered: {
                     invokeReview.trigger("bb.action.OPEN")
-                }
-            },
-            ActionItem {
-                imageSource: "asset:///icon/ic_open_link.png"
-                title: qsTr("Credits")+ Retranslate.onLocaleOrLanguageChanged
-                onTriggered: {
-                    Qt.openUrlExternally("http://anpho.github.io/cascades")
                 }
             }
         ]
@@ -117,7 +110,7 @@ NavigationPane {
                 }
                 expandableArea {
                     content: DateTimePicker {
-                        title: qsTr("Date")+ Retranslate.onLocaleOrLanguageChanged
+                        title: qsTr("Date") + Retranslate.onLocaleOrLanguageChanged
                         id: picker
                         //                        value: displayingday
                         onValueChanged: {
@@ -137,7 +130,7 @@ NavigationPane {
             appearance: TitleBarAppearance.Plain
             scrollBehavior: TitleBarScrollBehavior.NonSticky
         }
-        actionBarVisibility: ChromeVisibility.Visible
+        actionBarVisibility: ChromeVisibility.Overlay
         actionBarAutoHideBehavior: ActionBarAutoHideBehavior.HideOnScroll
         ScrollView {
             topMargin: 20.0
@@ -146,6 +139,7 @@ NavigationPane {
             bottomMargin: 20.0
             verticalAlignment: VerticalAlignment.Fill
             horizontalAlignment: HorizontalAlignment.Fill
+            scrollRole: ScrollRole.Main
             Container {
                 verticalAlignment: VerticalAlignment.Fill
                 horizontalAlignment: HorizontalAlignment.Fill
@@ -158,6 +152,8 @@ NavigationPane {
 
                 Container {
                     id: content
+                    horizontalAlignment: HorizontalAlignment.Fill
+                    implicitLayoutAnimationsEnabled: false
                 }
 
                 ActivityIndicator {
@@ -177,7 +173,7 @@ NavigationPane {
         }
         actions: [
             ActionItem {
-                title: qsTr("prev")+ Retranslate.onLocaleOrLanguageChanged
+                title: qsTr("prev") + Retranslate.onLocaleOrLanguageChanged
 
                 onTriggered: {
                     console.log(displayingday);
@@ -188,7 +184,7 @@ NavigationPane {
                 enabled: Qt.formatDate(displayingday, "yyyy-MM-dd") > startdate
             },
             ActionItem {
-                title: qsTr("next")+ Retranslate.onLocaleOrLanguageChanged
+                title: qsTr("next") + Retranslate.onLocaleOrLanguageChanged
                 onTriggered: {
                     console.log(displayingday + "," + todayinDate);
                     displayingday = new Date(displayingday.setDate(displayingday.getDate() + 1));
@@ -241,14 +237,14 @@ NavigationPane {
         },
         SystemToast {
             id: toast
-            body: qsTr("Network Error")+ Retranslate.onLocaleOrLanguageChanged
+            body: qsTr("Network Error") + Retranslate.onLocaleOrLanguageChanged
             modality: SystemUiModality.Global
             position: SystemUiPosition.MiddleCenter
         },
         ComponentDefinition {
             id: emp
             Label {
-                text: qsTr("No content today")+ Retranslate.onLocaleOrLanguageChanged
+                text: qsTr("No content today") + Retranslate.onLocaleOrLanguageChanged
             }
         },
         Invocation {

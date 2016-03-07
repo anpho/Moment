@@ -137,19 +137,13 @@ simulator {
 config_pri_assets {
     OTHER_FILES += \
         $$quote($$BASEDIR/assets/114.png) \
-        $$quote($$BASEDIR/assets/1280x720.png) \
-        $$quote($$BASEDIR/assets/1280x768.png) \
-        $$quote($$BASEDIR/assets/720x1280.png) \
-        $$quote($$BASEDIR/assets/720x720.png) \
-        $$quote($$BASEDIR/assets/768x1280.png) \
-        $$quote($$BASEDIR/assets/AdiQuity.qml) \
         $$quote($$BASEDIR/assets/Clist.qml) \
         $$quote($$BASEDIR/assets/Storage.qml) \
         $$quote($$BASEDIR/assets/VisualStyle.Bright/about.png) \
         $$quote($$BASEDIR/assets/VisualStyle.Dark/about.png) \
         $$quote($$BASEDIR/assets/about.qml) \
-        $$quote($$BASEDIR/assets/ad.png) \
         $$quote($$BASEDIR/assets/ajax.js) \
+        $$quote($$BASEDIR/assets/ic_default_image_square_light.png) \
         $$quote($$BASEDIR/assets/icon/avatar.png) \
         $$quote($$BASEDIR/assets/icon/ic_contact.png) \
         $$quote($$BASEDIR/assets/icon/ic_email_dk.png) \
@@ -188,12 +182,14 @@ config_pri_source_group1 {
     SOURCES += \
         $$quote($$BASEDIR/src/AppInfo.cpp) \
         $$quote($$BASEDIR/src/AppSettings.cpp) \
+        $$quote($$BASEDIR/src/WebImageView.cpp) \
         $$quote($$BASEDIR/src/applicationui.cpp) \
         $$quote($$BASEDIR/src/main.cpp)
 
     HEADERS += \
         $$quote($$BASEDIR/src/AppInfo.h) \
         $$quote($$BASEDIR/src/AppSettings.hpp) \
+        $$quote($$BASEDIR/src/WebImageView.h) \
         $$quote($$BASEDIR/src/applicationui.hpp)
 }
 
@@ -230,4 +226,5 @@ lupdate_inclusion {
 }
 
 TRANSLATIONS = $$quote($${TARGET}_zh_CN.ts) \
+    $$quote($${TARGET}_zh_TW.ts) \
     $$quote($${TARGET}.ts)
